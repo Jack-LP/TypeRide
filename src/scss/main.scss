@@ -1,0 +1,142 @@
+@import 'reset';
+@import 'variables';
+@import 'fonts';
+
+* {
+  font-family: $bodyFont;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: url(../img/gradientBg.png) fixed no-repeat;
+  background-size: cover;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+select {
+  width: 20rem;
+  padding: 0.6rem;
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0.6rem;
+  border: none;
+  background-color: white;
+  outline: none;
+  font-size: 1.6rem;
+}
+
+.settings-btn {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background-color: #0079fe;
+  border-radius: 1rem;
+  padding: 1.3rem;
+  i {
+    font-size: 2rem;
+    color: white;
+  }
+}
+
+.settings {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  height: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.settings-content {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.settings {
+  &.hide {
+    transform: translateY(-100%);
+  }
+}
+
+.container {
+  background-color: #1f2a48;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 0.7rem rgba(0, 0, 0, 0.164);
+  color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 2rem 2.5rem 2rem;
+  gap: 2rem;
+  align-items: center;
+  width: min(95%, 45rem);
+  text-align: center;
+  .variable-display {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  h2 {
+    font-size: 3rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 0.8rem;
+    border-radius: 0.4rem;
+    width: 100%;
+  }
+  input {
+    border: 0;
+    border-radius: 0.6rem;
+    font-size: 1.6rem;
+    padding: 1.2rem 2rem;
+    outline: none;
+    width: 75%;
+  }
+  h1 {
+    margin-top: -1.5rem;
+  }
+}
+
+.time,
+.score {
+  font-family: $monoFont;
+}
+
+.end-game-container {
+  background-color: inherit;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border-radius: 1rem;
+  .reload-btn {
+    background-color: #0079fe;
+    border-radius: 1rem;
+    padding: 1.3rem;
+    color: white;
+    font-size: 1.6rem;
+  }
+}
